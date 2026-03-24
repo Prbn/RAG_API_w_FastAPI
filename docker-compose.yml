@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  app:
+    image: ubuntu:22.04
+    container_name: rag_fastapi_app
+
+    volumes:
+      - ./volume:/app/volume
+      - ./code:/app/code
+      - ./data:/app/data
+    
+    working_dir: /app/code
+    
+    ports:
+      - "8000:8000"
+    
+    command: >
+      bash -c "
+        apt-get update &&
+        apt-get install -y python3.11 python3-pip &&
+        pip3 install --no-cache-dir -r requirements.txt &&
+        uvicorn main:app --host 0.0.0.0 --port 8000
+      "
+    tty: true
