@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    image: ubuntu
     container_name: rag_fastapi_app
 
     volumes:
@@ -22,5 +22,5 @@ services:
         pip install --upgrade pip &&
         pip install --no-cache-dir -r /app/code/requirements.txt
       "
-      
+
     tty: true
