@@ -42,3 +42,48 @@ Everything is exposed through clean, async FastAPI endpoints.
 
 ## 📂 Project Structure
 
+```
+├── app/
+│   ├── api/            # Route handlers and API endpoints
+│   ├── core/           # Config, settings, and initialization logic
+│   ├── models/         # Pydantic models and schemas
+│   ├── services/       # RAG pipeline, embeddings, vector DB, LLM logic
+│   ├── utils/          # Helper functions and shared utilities
+│   └── main.py         # FastAPI entrypoint
+├── data/               # Source documents or embeddings (optional)
+├── requirements.txt     # Python dependencies
+└── README.md
+```
+---
+
+## 🚦 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Prbn/RAG_API_w_FastAPI.git
+cd RAG_API_w_FastAPI
+```
+
+### 2. Install dependencies
+```
+uvicorn app.main:app --reload
+```
+
+### 5. Access API docs
+```
+http://localhost:8000/docs
+```
+
+## 📚 Use Cases
+
+- **Domain‑specific chatbots**  
+- **Internal knowledge base search**  
+- **Customer support automation**  
+- **AI‑powered search for documents, PDFs, logs, etc.**  
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome.
+Feel free to open a PR or start a discussion.
+
+
+
