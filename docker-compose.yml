@@ -22,5 +22,5 @@ services:
         pip install --upgrade pip &&
         pip install --no-cache-dir -r /app/code/requirements.txt
       "
-    
+      
     tty: true
