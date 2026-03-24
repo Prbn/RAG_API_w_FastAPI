@@ -15,13 +15,4 @@ services:
     ports:
       - "8000:8000"
     
-    command: >
-      bash -c "
-        apt-get update &&
-        apt-get install -y python:3.13.11-slim &&
-        python3 -m pip install --upgrade pip &&
-        python3 -m pip install --no-cache-dir -r app/code/requirements.txt &&
-        uvicorn main:app --host 0.0.0.0 --port 8000 &&
-        sleep infinity
-      "
     tty: true
